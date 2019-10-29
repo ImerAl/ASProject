@@ -1,0 +1,104 @@
+﻿@model Proyecto_Fase2.Models.Users
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Eliminar usuario</h2>
+
+<h3>Seguro?</h3>
+<div>
+    <h4>Usuario</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Role.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Role.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Credentials)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Credentials)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Password)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Password)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Name1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Name2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LName1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LName1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LName2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LName2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Picture)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Picture)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Address)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Address)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Regresar", "Index", "Users",new { @class="btn btn-danger"})
+        </div>
+    }
+</div>

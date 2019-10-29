@@ -1,0 +1,50 @@
+﻿@model Proyecto_Fase2.Models.PurcharseDetails
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>PurcharseDetails</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ProductPurchase.status)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProductPurchase.status)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SuplyProduct.Id)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SuplyProduct.Id)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.QuantityBuyed)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.QuantityBuyed)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Total)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Total)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

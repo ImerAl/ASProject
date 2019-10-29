@@ -1,0 +1,56 @@
+﻿@model Proyecto_Fase2.Models.Product
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Borrar producto</h2>
+
+<h3>Esta seguro que quiere borrarlo?</h3>
+<div>
+    <h4>Producto</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.SubCategory_Provider.Id)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SubCategory_Provider.Id)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Internal_Code)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Internal_Code)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Status)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Status)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Regresar", "Index","Products", new { @class="btn btn-danger"})
+        </div>
+    }
+</div>
