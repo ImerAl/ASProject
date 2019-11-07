@@ -14,21 +14,17 @@ namespace Proyecto_Fase2.Models
         {
             SuplyInvoice = new HashSet<SuplyInvoice>();
         }
-      
+
         public int Id { get; set; }
 
-      
         public int? Id_Area { get; set; }
 
-        [Display(Name = "Nombre")]
         [StringLength(30)]
         public string Name { get; set; }
 
-        [Display(Name = "Descripcion")]
         [StringLength(50)]
         public string Description { get; set; }
 
-        
         public virtual Area Area { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

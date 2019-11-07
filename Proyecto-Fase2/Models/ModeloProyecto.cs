@@ -5,10 +5,10 @@ namespace Proyecto_Fase2.Models
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Linq;
 
-    public partial class A_Model_proyecto : DbContext
+    public partial class ModeloProyecto : DbContext
     {
-        public A_Model_proyecto()
-            : base("name=A_Model_proyecto")
+        public ModeloProyecto()
+            : base("name=ModeloProyecto")
         {
         }
 
@@ -29,6 +29,7 @@ namespace Proyecto_Fase2.Models
         public virtual DbSet<SuplyInvoice> SuplyInvoice { get; set; }
         public virtual DbSet<SuplyProduct> SuplyProduct { get; set; }
         public virtual DbSet<Users> Users { get; set; }
+        public virtual DbSet<Employee> Employee { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -51,6 +52,11 @@ namespace Proyecto_Fase2.Models
 
             modelBuilder.Entity<Area>()
                 .HasMany(e => e.AccoutingBook)
+                .WithOptional(e => e.Area)
+                .HasForeignKey(e => e.Id_Area);
+
+            modelBuilder.Entity<Area>()
+                .HasMany(e => e.Employee)
                 .WithOptional(e => e.Area)
                 .HasForeignKey(e => e.Id_Area);
 
@@ -262,6 +268,16 @@ namespace Proyecto_Fase2.Models
                 .HasMany(e => e.ProductPurchase)
                 .WithOptional(e => e.Users)
                 .HasForeignKey(e => e.Id_User);
+
+            modelBuilder.Entity<Users>()
+                .HasMany(e => e.Employee)
+                .WithOptional(e => e.Users)
+                .HasForeignKey(e => e.Id_User);
+
+            modelBuilder.Entity<Employee>()
+                .Property(e => e.Chief_Area)
+                .IsFixedLength()
+                .IsUnicode(false);
         }
     }
 }

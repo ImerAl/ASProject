@@ -14,7 +14,7 @@ namespace Proyecto_Fase2.Models
         {
             PurcharseDetails = new HashSet<PurcharseDetails>();
         }
-        [Display(Name ="Producto")]
+
         public int Id { get; set; }
 
         public int? Id_SuplyInvoice { get; set; }
