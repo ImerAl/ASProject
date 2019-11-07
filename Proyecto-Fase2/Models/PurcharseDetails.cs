@@ -13,9 +13,9 @@ namespace Proyecto_Fase2.Models
         public int? Id_Purcharse { get; set; }
 
         public int? Id_SuplyProduct { get; set; }
-        [Display(Name = "Cantidad")]
+
         public int? QuantityBuyed { get; set; }
-        [Display(Name = "Total")]
+
         [Column(TypeName = "money")]
         public decimal? Total { get; set; }
 

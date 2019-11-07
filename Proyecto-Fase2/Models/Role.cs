@@ -17,7 +17,7 @@ namespace Proyecto_Fase2.Models
         }
 
         public int Id { get; set; }
-        [Display(Name ="Rol")]
+
         [StringLength(20)]
         public string Name { get; set; }
 
