@@ -1,13 +1,13 @@
 ﻿@model Proyecto_Fase2.Models.Provider
 
 @{
-    ViewBag.Title = "Detalles";
+    ViewBag.Title = "Details";
 }
 
-<h2>Detalles</h2>
+<h2>Details</h2>
 
 <div>
-    <h4>Detalles de proveedor</h4>
+    <h4>Provider</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
@@ -37,6 +37,6 @@
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Editar", "Edit", new { id = Model.Id }) |
-    @Html.ActionLink("Regresar", "Index", "Provider", new { @class="btn btn-danger"})
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
 </p>
