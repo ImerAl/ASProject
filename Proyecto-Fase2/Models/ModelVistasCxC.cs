@@ -5,10 +5,10 @@ namespace Proyecto_Fase2.Models
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Linq;
 
-    public partial class ModelVistas : DbContext
+    public partial class ModelVistasCxC : DbContext
     {
-        public ModelVistas()
-            : base("name=ModelVistas1")
+        public ModelVistasCxC()
+            : base("name=ModelVistasCxC")
         {
         }
 
