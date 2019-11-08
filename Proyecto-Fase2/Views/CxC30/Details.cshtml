@@ -1,0 +1,66 @@
+﻿@model Proyecto_Fase2.Models.CxC30
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>CxC30</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Id_User)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Id_User)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateP)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateP)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateLimit)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateLimit)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Id_LatePayment)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Id_LatePayment)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.status)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.status)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TotalAmount)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TotalAmount)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
