@@ -1,10 +1,16 @@
 namespace Proyecto_Fase2.Models
 {
+    using Helper;
     using System;
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
+    using System.Linq;
+   
+    
+    
+    
 
     public partial class Users
     {
@@ -53,5 +59,60 @@ namespace Proyecto_Fase2.Models
         public virtual ICollection<ProductPurchase> ProductPurchase { get; set; }
 
         public virtual Role Role { get; set; }
+
+
+        public ResponseModel Autenticarse()
+        {
+            var rm = new ResponseModel();
+
+            try
+            {
+                using (var ctx = new A_Model_proyecto())
+                {
+                    var usuario = ctx.Users.Where(x => x.Email == this.Email && x.Password == this.Password).SingleOrDefault();
+
+                    if (usuario != null )
+                    {
+                        SessionHelper.AddUserToSession(usuario.Id.ToString());
+                        rm.SetResponse(true);
+                    }
+                    else
+                    {
+                        rm.SetResponse(false);
+                    }
+                }
+            }
+            catch
+            {
+                throw;
+            }
+            return rm;
+        }
+
+        public Users Obtener(int id)
+        {
+            var usuario = new Users();
+
+            try
+            {
+                using (var ctx = new A_Model_proyecto())
+                {
+                    ctx.Configuration.LazyLoadingEnabled = false;
+
+                    usuario = ctx.Users.Where(x => x.Id == id).SingleOrDefault();
+                }
+            }
+            catch
+            {
+                throw;
+            }
+
+            return usuario;
+        }
+
+
+
+
+
     }
 }

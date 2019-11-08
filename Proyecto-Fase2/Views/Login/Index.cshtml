@@ -1,0 +1,51 @@
+﻿@model Proyecto_Fase2.ModeloLogin.Commons.LoginViewModel
+
+@{
+    ViewBag.Title = "Acceso al sistema";
+}
+
+<div style="color:black;height:10%;width:100%">
+</div>
+
+<fieldset><legend></legend>
+
+<div class="header">
+
+        <div style="text-align:right">
+        <img src="" width="150" height="220" />
+        </div>
+   
+</div>
+
+<div class="container">
+    <div style="text-align:center">
+        <img src="" width="100" height="100" />
+
+    </div>
+
+
+    @using (Html.BeginForm("Autenticar", "Login", FormMethod.Post ))
+{
+    <div class="form-group">
+        <lable for="#Correo" >Credenciales</lable>
+        @Html.TextBoxFor(x => x.Credenciales, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.Credenciales, null, new { @class = "label label-danger" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(x => x.Password)
+        <input type="password" name="Password" class="form-control" />
+        @Html.ValidationMessageFor(x => x.Password, null, new { @class = "label label-danger" })
+    </div>
+
+    <div class="text-right">
+        <button data-ajax="true" type="submit" class="btn btn-primary">Entrar</button>
+        @if (ViewBag.Error != "")
+        {
+            @MvcHtmlString.Create(ViewBag.Error)
+        }
+
+
+    </div>
+} 
+</div>
+</fieldset>
