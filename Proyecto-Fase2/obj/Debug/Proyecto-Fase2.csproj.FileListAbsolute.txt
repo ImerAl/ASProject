@@ -171,3 +171,4 @@ D:\Progra\ASP\ProyectoASP\Proyecto-Fase2\obj\Debug\Proyecto-Fase2.csproj.CoreCom
 D:\Progra\ASP\ProyectoASP\Proyecto-Fase2\obj\Debug\Proyecto-Fase2.csproj.CopyComplete
 D:\Progra\ASP\ProyectoASP\Proyecto-Fase2\obj\Debug\Proyecto-Fase2.dll
 D:\Progra\ASP\ProyectoASP\Proyecto-Fase2\obj\Debug\Proyecto-Fase2.pdb
+D:\Progra\ASP\ProyectoASP\Proyecto-Fase2\obj\Debug\Proyecto-Fase2.csprojAssemblyReference.cache

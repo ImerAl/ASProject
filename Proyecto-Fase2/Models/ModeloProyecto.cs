@@ -279,5 +279,7 @@ namespace Proyecto_Fase2.Models
                 .IsFixedLength()
                 .IsUnicode(false);
         }
+
+       
     }
 }

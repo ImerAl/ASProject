@@ -12,7 +12,7 @@ namespace Proyecto_Fase2.Controllers
 {
     public class CxC60Controller : Controller
     {
-        private ModelVistas db = new ModelVistas();
+        private ModelVistasCxC db = new ModelVistasCxC();
 
         // GET: CxC60
         public ActionResult Index()
