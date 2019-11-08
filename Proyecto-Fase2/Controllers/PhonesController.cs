@@ -12,7 +12,7 @@ namespace Proyecto_Fase2.Controllers
 {
     public class PhonesController : Controller
     {
-        private A_Model_proyecto db = new A_Model_proyecto();
+        private ModeloProyecto db = new ModeloProyecto();
 
         // GET: Phones
         public ActionResult Index()

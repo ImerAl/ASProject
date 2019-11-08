@@ -20,12 +20,12 @@ namespace Proyecto_Fase2.Models
         public int? Id_AccountingBook { get; set; }
 
         public int? Id_LatePayment { get; set; }
-        [Display(Name = "Fecha de compra")]
+
         public DateTime? Date_Suply { get; set; }
-        [Display(Name = "Total final")]
+
         [Column(TypeName = "money")]
         public decimal? TotalAmount { get; set; }
-        [Display(Name = "Estado")]
+
         [StringLength(1)]
         public string status { get; set; }
 
