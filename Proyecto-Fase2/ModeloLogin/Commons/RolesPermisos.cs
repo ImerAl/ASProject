@@ -9,10 +9,7 @@ namespace Proyecto_Fase2.ModeloLogin.Commons
     {
       
         #region Usuarios
-        Puede_ver_las_cuentas_y_editarlas= 1,
-        Puede_dar_mantenimiento = 2,
-        Puede_Acceder_a_entradas_y_salidas=3,
-        Puede_cerrar_la_cuenta_mensual=4,
+        Puede_dar_mantenimiento_Menos_Usuarios = 1,
         #endregion
 
 

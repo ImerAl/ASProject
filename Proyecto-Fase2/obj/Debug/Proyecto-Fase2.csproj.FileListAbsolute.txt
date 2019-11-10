@@ -171,3 +171,8 @@ C:\Users\camil_000\Desktop\UDB\Ciclo 2 2019\ASP\Proyecto\ASProject\Proyecto-Fase
 C:\Users\camil_000\Desktop\UDB\Ciclo 2 2019\ASP\Proyecto\ASProject\Proyecto-Fase2\obj\Debug\Proyecto-Fase2.dll
 C:\Users\camil_000\Desktop\UDB\Ciclo 2 2019\ASP\Proyecto\ASProject\Proyecto-Fase2\obj\Debug\Proyecto-Fase2.pdb
 C:\Users\camil_000\Desktop\UDB\Ciclo 2 2019\ASP\Proyecto\ASProject\Proyecto-Fase2\obj\Debug\Proyecto-Fase2.csprojAssemblyReference.cache
+C:\Users\camil_000\Desktop\UDB\Ciclo 2 2019\ASP\proyecto\ASProject\Proyecto-Fase2\bin\IdentityModel.dll
+C:\Users\camil_000\Desktop\UDB\Ciclo 2 2019\ASP\proyecto\ASProject\Proyecto-Fase2\bin\System.Text.Encodings.Web.dll
+C:\Users\camil_000\Desktop\UDB\Ciclo 2 2019\ASP\proyecto\ASProject\Proyecto-Fase2\bin\IdentityModel.pdb
+C:\Users\camil_000\Desktop\UDB\Ciclo 2 2019\ASP\proyecto\ASProject\Proyecto-Fase2\bin\IdentityModel.xml
+C:\Users\camil_000\Desktop\UDB\Ciclo 2 2019\ASP\proyecto\ASProject\Proyecto-Fase2\bin\System.Text.Encodings.Web.xml

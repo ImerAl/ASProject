@@ -29,6 +29,7 @@ namespace Proyecto_Fase2.Models
         public virtual DbSet<SuplyInvoice> SuplyInvoice { get; set; }
         public virtual DbSet<SuplyProduct> SuplyProduct { get; set; }
         public virtual DbSet<Users> Users { get; set; }
+        public virtual DbSet<TokenConnection> TokenConnection { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

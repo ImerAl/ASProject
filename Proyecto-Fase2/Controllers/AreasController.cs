@@ -16,7 +16,7 @@ namespace Proyecto_Fase2.Controllers
 
     //puede dar mantenimiento sería el permiso, se puede editar en ModeloLogin > Commoons > RolesPermisos
 
-    [PermisoAttribute(Permiso = RolesPermisos.Puede_dar_mantenimiento)]
+    [PermisoAttribute(Permiso = RolesPermisos.Puede_dar_mantenimiento_Menos_Usuarios)]
     public class AreasController : Controller
     {
         private A_Model_proyecto db = new A_Model_proyecto();
