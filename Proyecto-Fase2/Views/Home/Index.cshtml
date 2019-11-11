@@ -3,12 +3,6 @@
     Layout = "~/Views/Shared/_Layout2.cshtml";
 }
 
-<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
-</div>
-
 <div class="row">
     <div class="col-md-3 col-sm-12 col-xs-12">
         <div class="panel panel-primary text-center no-boder bg-color-green">
@@ -20,6 +14,53 @@
                     @Html.ActionLink("Libro Contable", "Index", "AccoutingBooks")
                 </p>
 
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3 col-sm-12 col-xs-12">
+        <div class="panel panel-primary text-center no-boder bg-color-green">
+            <div class="panel-body">
+                <i class="fa fa-map-marker fa-5x"></i>
+            </div>
+            <div class="panel-footer back-footer-blue">
+                <p>
+                    @Html.ActionLink("Areas", "Index", "Areas")
+                </p>
+
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3 col-sm-12 col-xs-12">
+        <div class="panel panel-primary text-center no-boder bg-color-green">
+            <div class="panel-body">
+                <i class="fa fa-folder-open fa-5x"></i>
+            </div>
+            <div class="panel-footer back-footer-blue">
+                <p>
+                    @Html.ActionLink("Categorias", "Index", "Categories")
+                </p>
+
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3 col-sm-12 col-xs-12">
+        <div class="panel panel-primary text-center no-boder bg-color-green">
+            <div class="panel-body">
+                <i class="fa fa-book fa-5x"></i>
+            </div>
+            <div class="panel-footer back-footer-blue">
+                <p>
+                    Cuentas por Cobrar
+                </p>
+                <p>
+                    @Html.ActionLink("30 dias", "Index", "CxC30")
+                </p>
+                <p>
+                    @Html.ActionLink("60 dias", "Index", "CxC60")
+                </p>
+                <p>
+                    @Html.ActionLink("90 dias", "Index", "CxC90")
+                </p>
             </div>
         </div>
     </div>
