@@ -2,9 +2,10 @@
 
 @{
     ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout2.cshtml";
 }
 
-<h2>Index</h2>
+<h2>Cuentas por Cobrar (60 dias)</h2>
 
 <table class="table">
     <tr>
@@ -29,28 +30,29 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Id_User)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.DateP)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.DateLimit)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Id_LatePayment)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.status)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.TotalAmount)
-        </td>
-        
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id_User)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateP)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateLimit)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id_LatePayment)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.status)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TotalAmount)
+            </td>
+
+        </tr>
+    }
 
 </table>
