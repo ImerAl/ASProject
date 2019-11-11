@@ -12,7 +12,7 @@ namespace Proyecto_Fase2.Controllers
 {
     public class Sub_CategoryController : Controller
     {
-        private A_Model_proyecto db = new A_Model_proyecto();
+        private ModeloProyecto db = new ModeloProyecto();
 
         // GET: Sub_Category
         public ActionResult Index()

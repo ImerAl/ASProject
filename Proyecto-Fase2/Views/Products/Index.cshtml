@@ -4,12 +4,12 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Productos registrados</h2>
+<h2>Index</h2>
 
 <p>
-    @Html.ActionLink("Crear", "Create", "Products", new { @class="btn btn-success"})
+    @Html.ActionLink("Create New", "Create")
 </p>
-<table class="table table-bordered">
+<table class="table">
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.SubCategory_Provider.Id)
@@ -41,9 +41,9 @@
             @Html.DisplayFor(modelItem => item.Status)
         </td>
         <td>
-            @Html.ActionLink("Editar", "Edit", new { id=item.Id }) |
-            @Html.ActionLink("Detalles", "Details", new { id=item.Id }) |
-            @Html.ActionLink("Borrar", "Delete", new { id=item.Id })
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
         </td>
     </tr>
 }
