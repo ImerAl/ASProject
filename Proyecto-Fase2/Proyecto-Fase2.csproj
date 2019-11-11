@@ -143,6 +143,7 @@
     <Compile Include="Controllers\CxC90Controller.cs" />
     <Compile Include="Controllers\DPBRsController.cs" />
     <Compile Include="Controllers\EmployeesController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LatePaymentsController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\PermissionsController.cs" />
