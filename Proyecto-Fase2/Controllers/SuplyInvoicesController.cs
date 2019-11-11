@@ -33,6 +33,10 @@ namespace Proyecto_Fase2.Controllers
             {
                 return HttpNotFound();
             }
+
+            var suplyProduct = (from p in db.SuplyProduct where p.Id_SuplyInvoice == id select p);
+            ViewBag.Productos = suplyProduct.ToList();
+
             return View(suplyInvoice);
         }
 
@@ -53,6 +57,7 @@ namespace Proyecto_Fase2.Controllers
         {
             if (ModelState.IsValid)
             {
+                suplyInvoice.status = "1";
                 db.SuplyInvoice.Add(suplyInvoice);
                 db.SaveChanges();
                 return RedirectToAction("Index");
@@ -132,5 +137,19 @@ namespace Proyecto_Fase2.Controllers
             }
             base.Dispose(disposing);
         }
+
+
+        public ActionResult Cerrar(int Id)
+        {
+            SuplyInvoice suplyInvoice = db.SuplyInvoice.Find(Id);
+            suplyInvoice.status = "0";
+
+            db.SaveChanges();
+            return RedirectToAction("Index");
+
+
+        }
+
+
     }
 }

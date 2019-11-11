@@ -2,6 +2,7 @@
 
 @{
     ViewBag.Title = "Details";
+        Layout = "~/Views/Shared/_Layout2.cshtml";
 }
 
 <h2>Details</h2>
@@ -18,13 +19,7 @@
             @Html.DisplayFor(model => model.AccoutingBook.Name)
         </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.LatePayment.TypeIncrement)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.LatePayment.TypeIncrement)
-        </dd>
+       
 
         <dt>
             @Html.DisplayNameFor(model => model.Date_Suply)
@@ -47,12 +42,61 @@
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.status)
+           @if (Model.status == "0") { <p>Cerrado</p> }
+           @if (Model.status=="1") {<p>Abierto</p> }
         </dd>
 
     </dl>
 </div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
+
+
+<table class="table">
+    <tr>
+        <th>
+           Nombre producto
+        </th>
+        <th>
+            Cantidad
+        </th>
+        <th>
+           Costo unitario
+        </th>
+        <th>
+            Total
+        </th>
+    </tr>
+
+    @foreach (Proyecto_Fase2.Models.SuplyProduct item in ViewBag.Productos)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Product.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Quantity)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UnitCost)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TotalAmount)
+            </td>
+           
+        </tr>
+    }
+
+</table>
+
+
+
+
+
+
+
+
+
+
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>

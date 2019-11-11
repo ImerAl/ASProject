@@ -2,20 +2,18 @@
 
 @{
     ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout2.cshtml";
 }
 
 <h2>Factura de compra</h2>
 
 <p>
-    @Html.ActionLink("Agregar factura", "Create", "SuplayInvoice", new { @class="btn btn-success"})
+    @Html.ActionLink("Agregar factura", "Create", "SuplayInvoice", new { @class = "btn btn-success" })
 </p>
-<table class="table">
+<table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.AccoutingBook.Name)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.LatePayment.TypeIncrement)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Date_Suply)
@@ -23,35 +21,42 @@
         <th>
             @Html.DisplayNameFor(model => model.TotalAmount)
         </th>
-        <th>
-            @Html.DisplayNameFor(model => model.status)
-        </th>
         <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.AccoutingBook.Name)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.LatePayment.TypeIncrement)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Date_Suply)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.TotalAmount)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.status)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
-            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.AccoutingBook.Name)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Date_Suply)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.TotalAmount)
+    </td>
+    @if (item.status == "1")
+    {
+        <td>@Html.ActionLink("Editar", "Edit", new { id = item.Id }) </td>
+        <td>@Html.ActionLink("Detalles", "Details", new { id = item.Id }) </td>
+        <td>@Html.ActionLink("Borrar", "Delete", new { id = item.Id })</td>
+        <td><a href="~/SuplyProducts/Index?Id=@item.Id">Agregar productos</a></td>
+        <td><a href="~/SuplyInvoices/Cerrar?Id=@item.Id">Cerrar kardex</a></td>
+            }
+            @if (item.status == "0")
+            {
+
+<td> @Html.ActionLink("Detalles", "Details", new { id = item.Id }) </td>
+<td> @Html.ActionLink("Borrar", "Delete", new { id = item.Id })</td>
+<td><a>Cerrado</a></td>
+                }
+        </tr>
+    }
 
 </table>
