@@ -46,7 +46,7 @@ namespace Helper
 
             string Token= System.Web.HttpContext.Current.Session["SYSAUTH"] as String; 
 
-            using (var db=new A_Model_proyecto())
+            using (var db=new ModeloProyecto())
             {
                 TokenConnection tk = (from p in db.TokenConnection where p.Token == Token select p).SingleOrDefault();
 
@@ -78,7 +78,7 @@ namespace Helper
             string Cadena = Metodos.GenerarCodigo(16);            
             System.Web.HttpContext.Current.Session["SYSAUTH"] = Cadena;
 
-            using ( var db=new A_Model_proyecto())
+            using ( var db=new ModeloProyecto())
             {
                 TokenConnection tk = new TokenConnection();
                 tk.Id_User = int.Parse(id); 

@@ -172,3 +172,8 @@ D:\Progra\ASP\ProyectoASP\Proyecto-Fase2\obj\Debug\Proyecto-Fase2.csproj.CopyCom
 D:\Progra\ASP\ProyectoASP\Proyecto-Fase2\obj\Debug\Proyecto-Fase2.dll
 D:\Progra\ASP\ProyectoASP\Proyecto-Fase2\obj\Debug\Proyecto-Fase2.pdb
 D:\Progra\ASP\ProyectoASP\Proyecto-Fase2\obj\Debug\Proyecto-Fase2.csprojAssemblyReference.cache
+D:\Progra\ASP\ProyectoASP\Proyecto-Fase2\bin\IdentityModel.dll
+D:\Progra\ASP\ProyectoASP\Proyecto-Fase2\bin\System.Text.Encodings.Web.dll
+D:\Progra\ASP\ProyectoASP\Proyecto-Fase2\bin\IdentityModel.pdb
+D:\Progra\ASP\ProyectoASP\Proyecto-Fase2\bin\IdentityModel.xml
+D:\Progra\ASP\ProyectoASP\Proyecto-Fase2\bin\System.Text.Encodings.Web.xml

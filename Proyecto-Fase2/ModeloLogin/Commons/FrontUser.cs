@@ -20,7 +20,7 @@ namespace Proyecto_Fase2.ModeloLogin.Commons
             {
 
                 
-                    using (var db = new A_Model_proyecto())
+                    using (var db = new ModeloProyecto())
                     {
                         string descr = valor.ToString();
 
