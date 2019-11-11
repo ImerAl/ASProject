@@ -12,7 +12,7 @@ namespace Proyecto_Fase2.Controllers
 {
     public class ProvidersController : Controller
     {
-        private A_Model_proyecto db = new A_Model_proyecto();
+        private ModeloProyecto db = new ModeloProyecto();
 
         // GET: Providers
         public ActionResult Index()

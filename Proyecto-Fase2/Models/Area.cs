@@ -13,15 +13,18 @@ namespace Proyecto_Fase2.Models
         public Area()
         {
             AccoutingBook = new HashSet<AccoutingBook>();
+            Employee = new HashSet<Employee>();
         }
 
         public int Id { get; set; }
 
-        [Display(Name = "Nombre")]
         [StringLength(50)]
         public string Name { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<AccoutingBook> AccoutingBook { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Employee> Employee { get; set; }
     }
 }

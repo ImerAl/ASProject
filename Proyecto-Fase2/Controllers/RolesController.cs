@@ -12,7 +12,7 @@ namespace Proyecto_Fase2.Controllers
 {
     public class RolesController : Controller
     {
-        private A_Model_proyecto db = new A_Model_proyecto();
+        private ModeloProyecto db = new ModeloProyecto();
 
         // GET: Roles
         public ActionResult Index()
