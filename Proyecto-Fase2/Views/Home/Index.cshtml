@@ -49,20 +49,22 @@
                 <i class="fa fa-hand-holding-usd fa-5x"></i>
             </div>
             <div class="panel-footer back-footer-blue">
-                <p>
-                    Cuentas por Cobrar
-                    <ul>
-                        <li>
-                            @Html.ActionLink("30 dias", "Index", "CxC30")
-                        </li>
-                        <li>
-                            @Html.ActionLink("60 dias", "Index", "CxC60")
-                        </li>
-                        <li>
-                            @Html.ActionLink("90 dias", "Index", "CxC90")
-                        </li>
+                <u class="nav">
+                    <p>
+                        Cuentas por Cobrar
+                        <ul>
+                    <p>
+                        @Html.ActionLink("30 dias", "Index", "CxC30")
+                    </p>
+                    <p>
+                        @Html.ActionLink("60 dias", "Index", "CxC60")
+                    </p>
+                    <lp>
+                        @Html.ActionLink("90 dias", "Index", "CxC90")
+                    </lp>
                     </ul>
-                </p>
+                    </p>
+                </u>
             </div>
         </div>
     </div>
@@ -149,7 +151,7 @@
     <div class="col-md-3 col-sm-12 col-xs-12">
         <div class="panel panel-primary text-center no-boder bg-color-green">
             <div class="panel-body">
-                <i class="fa fa-desktop fa-5x"></i>
+                <i class="fa fa-cookie-bite fa-5x"></i>
             </div>
             <div class="panel-footer back-footer-blue">
                 <p>
@@ -162,7 +164,7 @@
     <div class="col-md-3 col-sm-12 col-xs-12">
         <div class="panel panel-primary text-center no-boder bg-color-green">
             <div class="panel-body">
-                <i class="fa fa-briefcase fa-5x"></i>
+                <i class="fa fa-truck fa-5x"></i>
             </div>
             <div class="panel-footer back-footer-blue">
                 <p>
@@ -202,11 +204,11 @@
     <div class="col-md-3 col-sm-12 col-xs-12">
         <div class="panel panel-primary text-center no-boder bg-color-green">
             <div class="panel-body">
-                <i class="fa fa-desktop fa-5x"></i>
+                <i class="fa fa-hotdog fa-5x"></i>
             </div>
             <div class="panel-footer back-footer-blue">
                 <p>
-                    @Html.ActionLink("", "Index", "Products")
+                    @Html.ActionLink("Sub Categoria Productos", "Index", "Sub_Category")
                 </p>
 
             </div>
@@ -215,13 +217,40 @@
     <div class="col-md-3 col-sm-12 col-xs-12">
         <div class="panel panel-primary text-center no-boder bg-color-green">
             <div class="panel-body">
-                <i class="fa fa-briefcase fa-5x"></i>
+                <i class="fa fa-box-open fa-5x"></i>
             </div>
             <div class="panel-footer back-footer-blue">
                 <p>
-                    @Html.ActionLink("", "Index", "Providers")
+                    @Html.ActionLink("Sub Categoria Proveedores", "Index", "SubCategory_Provider")
                 </p>
 
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-3 col-sm-12 col-xs-12">
+        <div class="panel panel-primary text-center no-boder bg-color-green">
+            <div class="panel-body">
+                <i class="fa fa-book-open fa-5x"></i>
+            </div>
+            <div class="panel-footer back-footer-blue">
+                <p>
+                    @Html.ActionLink("Kardex", "Index", "SuplyProducts")
+                </p>
+
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3 col-sm-12 col-xs-12">
+        <div class="panel panel-primary text-center no-boder bg-color-green">
+            <div class="panel-body">
+                <i class="fa fa-user fa-5x"></i>
+            </div>
+            <div class="panel-footer back-footer-blue">
+                <p>
+                    @Html.ActionLink("Usuarios", "Index", "Users")
+                </p>
             </div>
         </div>
     </div>
