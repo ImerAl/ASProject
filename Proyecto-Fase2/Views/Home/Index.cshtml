@@ -20,7 +20,7 @@
     <div class="col-md-3 col-sm-12 col-xs-12">
         <div class="panel panel-primary text-center no-boder bg-color-green">
             <div class="panel-body">
-                <i class="fa fa-map-marker fa-5x"></i>
+                <i class="fa fa-map-marker-alt fa-5x"></i>
             </div>
             <div class="panel-footer back-footer-blue">
                 <p>
@@ -33,7 +33,7 @@
     <div class="col-md-3 col-sm-12 col-xs-12">
         <div class="panel panel-primary text-center no-boder bg-color-green">
             <div class="panel-body">
-                <i class="fa fa-folder-open fa-5x"></i>
+                <i class="fa fa-sitemap fa-5x"></i>
             </div>
             <div class="panel-footer back-footer-blue">
                 <p>
@@ -46,21 +46,182 @@
     <div class="col-md-3 col-sm-12 col-xs-12">
         <div class="panel panel-primary text-center no-boder bg-color-green">
             <div class="panel-body">
-                <i class="fa fa-book fa-5x"></i>
+                <i class="fa fa-hand-holding-usd fa-5x"></i>
             </div>
             <div class="panel-footer back-footer-blue">
                 <p>
                     Cuentas por Cobrar
+                    <ul>
+                        <li>
+                            @Html.ActionLink("30 dias", "Index", "CxC30")
+                        </li>
+                        <li>
+                            @Html.ActionLink("60 dias", "Index", "CxC60")
+                        </li>
+                        <li>
+                            @Html.ActionLink("90 dias", "Index", "CxC90")
+                        </li>
+                    </ul>
                 </p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-3 col-sm-12 col-xs-12">
+        <div class="panel panel-primary text-center no-boder bg-color-green">
+            <div class="panel-body">
+                <i class="fa fa-check-square fa-5x"></i>
+            </div>
+            <div class="panel-footer back-footer-blue">
                 <p>
-                    @Html.ActionLink("30 dias", "Index", "CxC30")
+                    @Html.ActionLink("Control de Permisos", "Index", "DPBRs")
                 </p>
+
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3 col-sm-12 col-xs-12">
+        <div class="panel panel-primary text-center no-boder bg-color-green">
+            <div class="panel-body">
+                <i class="fa fa-user-tie fa-5x"></i>
+            </div>
+            <div class="panel-footer back-footer-blue">
                 <p>
-                    @Html.ActionLink("60 dias", "Index", "CxC60")
+                    @Html.ActionLink("Empleados", "Index", "Employees")
                 </p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3 col-sm-12 col-xs-12">
+        <div class="panel panel-primary text-center no-boder bg-color-green">
+            <div class="panel-body">
+                <i class="fa fa-calendar-times fa-5x"></i>
+            </div>
+            <div class="panel-footer back-footer-blue">
                 <p>
-                    @Html.ActionLink("90 dias", "Index", "CxC90")
+                    @Html.ActionLink("Pagos Tardios", "Index", "LatePayments")
                 </p>
+
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3 col-sm-12 col-xs-12">
+        <div class="panel panel-primary text-center no-boder bg-color-green">
+            <div class="panel-body">
+                <i class="fa fa-user-check fa-5x"></i>
+            </div>
+            <div class="panel-footer back-footer-blue">
+                <p>
+                    @Html.ActionLink("Permisos", "Index", "Permissions")
+                </p>
+
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-3 col-sm-12 col-xs-12">
+        <div class="panel panel-primary text-center no-boder bg-color-green">
+            <div class="panel-body">
+                <i class="fa fa-phone-alt fa-5x"></i>
+            </div>
+            <div class="panel-footer back-footer-blue">
+                <p>
+                    @Html.ActionLink("Telefonos", "Index", "Phones")
+                </p>
+
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3 col-sm-12 col-xs-12">
+        <div class="panel panel-primary text-center no-boder bg-color-green">
+            <div class="panel-body">
+                <i class="fa fa-dollar-sign fa-5x"></i>
+            </div>
+            <div class="panel-footer back-footer-blue">
+                <p>
+                    @Html.ActionLink("Compras", "Index", "ProductPurchases")
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3 col-sm-12 col-xs-12">
+        <div class="panel panel-primary text-center no-boder bg-color-green">
+            <div class="panel-body">
+                <i class="fa fa-desktop fa-5x"></i>
+            </div>
+            <div class="panel-footer back-footer-blue">
+                <p>
+                    @Html.ActionLink("Productos", "Index", "Products")
+                </p>
+
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3 col-sm-12 col-xs-12">
+        <div class="panel panel-primary text-center no-boder bg-color-green">
+            <div class="panel-body">
+                <i class="fa fa-briefcase fa-5x"></i>
+            </div>
+            <div class="panel-footer back-footer-blue">
+                <p>
+                    @Html.ActionLink("Proveedores", "Index", "Providers")
+                </p>
+
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-3 col-sm-12 col-xs-12">
+        <div class="panel panel-primary text-center no-boder bg-color-green">
+            <div class="panel-body">
+                <i class="fa fa-info-circle fa-5x"></i>
+            </div>
+            <div class="panel-footer back-footer-blue">
+                <p>
+                    @Html.ActionLink("Detalles de Compra", "Index", "PurcharseDetails")
+                </p>
+
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3 col-sm-12 col-xs-12">
+        <div class="panel panel-primary text-center no-boder bg-color-green">
+            <div class="panel-body">
+                <i class="fa fa-users fa-5x"></i>
+            </div>
+            <div class="panel-footer back-footer-blue">
+                <p>
+                    @Html.ActionLink("Roles", "Index", "Roles")
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3 col-sm-12 col-xs-12">
+        <div class="panel panel-primary text-center no-boder bg-color-green">
+            <div class="panel-body">
+                <i class="fa fa-desktop fa-5x"></i>
+            </div>
+            <div class="panel-footer back-footer-blue">
+                <p>
+                    @Html.ActionLink("", "Index", "Products")
+                </p>
+
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3 col-sm-12 col-xs-12">
+        <div class="panel panel-primary text-center no-boder bg-color-green">
+            <div class="panel-body">
+                <i class="fa fa-briefcase fa-5x"></i>
+            </div>
+            <div class="panel-footer back-footer-blue">
+                <p>
+                    @Html.ActionLink("", "Index", "Providers")
+                </p>
+
             </div>
         </div>
     </div>
