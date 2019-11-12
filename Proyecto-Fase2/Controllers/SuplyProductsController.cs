@@ -15,9 +15,17 @@ namespace Proyecto_Fase2.Controllers
         private ModeloProyecto db = new ModeloProyecto();
 
         // GET: SuplyProducts
-        public ActionResult Index()
+        public ActionResult Index(int Id)
         {
-            var suplyProduct = db.SuplyProduct.Include(s => s.Product).Include(s => s.SuplyInvoice);
+            SuplyInvoice SI = db.SuplyInvoice.Find(Id);
+
+            if (SI.status == "0")
+                return RedirectToAction("Index", "SuplyInvoices");
+
+
+            var suplyProduct = (from p in db.SuplyProduct where p.Id_SuplyInvoice == Id select p);
+                        
+            ViewBag.Id = Id.ToString();
             return View(suplyProduct.ToList());
         }
 
@@ -37,8 +45,9 @@ namespace Proyecto_Fase2.Controllers
         }
 
         // GET: SuplyProducts/Create
-        public ActionResult Create()
+        public ActionResult Create(int Id)
         {
+            ViewBag.Id = Id.ToString();
             ViewBag.Id_Product = new SelectList(db.Product, "Id", "Name");
             ViewBag.Id_SuplyInvoice = new SelectList(db.SuplyInvoice, "Id", "status");
             return View();
@@ -48,89 +57,49 @@ namespace Proyecto_Fase2.Controllers
         // Para protegerse de ataques de publicación excesiva, habilite las propiedades específicas a las que desea enlazarse. Para obtener 
         // más información vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Id_SuplyInvoice,Id_Product,Quantity,UnitCost,TotalAmount")] SuplyProduct suplyProduct)
+        public ActionResult Create(int Id,[Bind(Include = "Id,Id_SuplyInvoice,Id_Product,Quantity,UnitCost,TotalAmount")] SuplyProduct suplyProduct)
         {
             if (ModelState.IsValid)
             {
+                suplyProduct.Id_SuplyInvoice = Id;
+                suplyProduct.UnitCost = (decimal)suplyProduct.TotalAmount / (decimal)suplyProduct.Quantity;
+               
                 db.SuplyProduct.Add(suplyProduct);
                 db.SaveChanges();
-                return RedirectToAction("Index");
-            }
 
-            ViewBag.Id_Product = new SelectList(db.Product, "Id", "Name", suplyProduct.Id_Product);
-            ViewBag.Id_SuplyInvoice = new SelectList(db.SuplyInvoice, "Id", "status", suplyProduct.Id_SuplyInvoice);
-            return View(suplyProduct);
-        }
 
-        // GET: SuplyProducts/Edit/5
-        public ActionResult Edit(int? id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            SuplyProduct suplyProduct = db.SuplyProduct.Find(id);
-            if (suplyProduct == null)
-            {
-                return HttpNotFound();
-            }
-            ViewBag.Id_Product = new SelectList(db.Product, "Id", "Name", suplyProduct.Id_Product);
-            ViewBag.Id_SuplyInvoice = new SelectList(db.SuplyInvoice, "Id", "status", suplyProduct.Id_SuplyInvoice);
-            return View(suplyProduct);
-        }
-
-        // POST: SuplyProducts/Edit/5
-        // Para protegerse de ataques de publicación excesiva, habilite las propiedades específicas a las que desea enlazarse. Para obtener 
-        // más información vea https://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,Id_SuplyInvoice,Id_Product,Quantity,UnitCost,TotalAmount")] SuplyProduct suplyProduct)
-        {
-            if (ModelState.IsValid)
-            {
-                db.Entry(suplyProduct).State = EntityState.Modified;
+                SuplyInvoice SI = db.SuplyInvoice.Find(Id);               
+                SI.TotalAmount = db.SuplyProduct.Where(t => t.Id_SuplyInvoice == Id).Select(i =>i.TotalAmount).Sum();
                 db.SaveChanges();
-                return RedirectToAction("Index");
+
+                return RedirectToAction("Index", routeValues: new { Id = Id });
+                         
             }
-            ViewBag.Id_Product = new SelectList(db.Product, "Id", "Name", suplyProduct.Id_Product);
-            ViewBag.Id_SuplyInvoice = new SelectList(db.SuplyInvoice, "Id", "status", suplyProduct.Id_SuplyInvoice);
-            return View(suplyProduct);
+
+            return RedirectToAction("Index", routeValues: new { Id = Id });
         }
 
-        // GET: SuplyProducts/Delete/5
-        public ActionResult Delete(int? id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            SuplyProduct suplyProduct = db.SuplyProduct.Find(id);
-            if (suplyProduct == null)
-            {
-                return HttpNotFound();
-            }
-            return View(suplyProduct);
-        }
+        
+        
 
-        // POST: SuplyProducts/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public ActionResult DeleteConfirmed(int id)
+        public ActionResult DeleteConfirmed(int Id=0,int Id2=0)
         {
-            SuplyProduct suplyProduct = db.SuplyProduct.Find(id);
+            if (Id == 0 || Id2 == 0)
+                return RedirectToAction("Index", "SuplyInvoices");
+
+
+
+            SuplyProduct suplyProduct = db.SuplyProduct.Find(Id);
             db.SuplyProduct.Remove(suplyProduct);
             db.SaveChanges();
-            return RedirectToAction("Index");
+            SuplyInvoice SI = db.SuplyInvoice.Find(Id2);
+            SI.TotalAmount = db.SuplyProduct.Where(t => t.Id_SuplyInvoice == Id).Select(i => i.TotalAmount).Sum();
+            db.SaveChanges();
+
+
+
+            return RedirectToAction("Index", routeValues: new { Id = Id2 });
         }
 
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing)
-            {
-                db.Dispose();
-            }
-            base.Dispose(disposing);
-        }
     }
 }

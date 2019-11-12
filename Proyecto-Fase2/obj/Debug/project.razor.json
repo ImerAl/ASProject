@@ -1,0 +1,19 @@
+{
+  "FilePath": "c:\\Users\\camil_000\\Desktop\\UDB\\Ciclo 2 2019\\ASP\\Proyecto\\ASProject\\Proyecto-Fase2\\Proyecto-Fase2.csproj",
+  "Configuration": {
+    "ConfigurationName": "UnsupportedRazor",
+    "LanguageVersion": "1.0",
+    "Extensions": [
+      {
+        "ExtensionName": "UnsupportedRazorExtension"
+      }
+    ]
+  },
+  "ProjectWorkspaceState": {
+    "TagHelpers": [],
+    "CSharpLanguageVersion": 703
+  },
+  "RootNamespace": null,
+  "Documents": [],
+  "SerializationFormat": "0.2"
+}
