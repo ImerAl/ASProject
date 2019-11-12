@@ -6,13 +6,16 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
+using Proyecto_Fase2.ModeloLogin.Commons;
 using Proyecto_Fase2.Models;
+using Proyecto_Fase2.Tags;
 
 namespace Proyecto_Fase2.Controllers
 {
+    [PermisoAttribute(Permiso = RolesPermisos.General)]
     public class RolesController : Controller
     {
-        private A_Model_proyecto db = new A_Model_proyecto();
+        private ModeloProyecto db = new ModeloProyecto();
 
         // GET: Roles
         public ActionResult Index()

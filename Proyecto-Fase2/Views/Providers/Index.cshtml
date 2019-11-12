@@ -2,12 +2,13 @@
 
 @{
     ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout2.cshtml";
 }
 
-<h2>Proveedor</h2>
+<h2>Proveedores</h2>
 
 <p>
-    @Html.ActionLink("Agregar", "Create", "Provider", new { @class="btn btn-success"})
+    @Html.ActionLink("Insertar", "Create", "Providers", new { @class = "btn btn-primary" })
 </p>
 <table class="table">
     <tr>
@@ -35,9 +36,9 @@
             @Html.DisplayFor(modelItem => item.Status)
         </td>
         <td>
-            @Html.ActionLink("Editar", "Edit", new { id=item.Id }) |
-            @Html.ActionLink("Detalles", "Details", new { id=item.Id }) |
-            @Html.ActionLink("Borrar", "Delete", new { id=item.Id })
+            @Html.ActionLink("Editar", "Edit", new { id=item.Id }, new { @class = "btn btn-primary" }) 
+            @Html.ActionLink("Detalles", "Details", new { id=item.Id }, new { @class = "btn btn-primary" }) 
+            @Html.ActionLink("Eliminar", "Delete", new { id=item.Id }, new { @class = "btn btn-primary" })
         </td>
     </tr>
 }

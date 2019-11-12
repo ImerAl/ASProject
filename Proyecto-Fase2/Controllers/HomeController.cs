@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Proyecto_Fase2.ModeloLogin.Commons;
+using Proyecto_Fase2.Tags;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -6,6 +8,7 @@ using System.Web.Mvc;
 
 namespace Proyecto_Fase2.Controllers
 {
+    [PermisoAttribute(Permiso = RolesPermisos.General)]
     public class HomeController : Controller
     {
         public ActionResult Index()

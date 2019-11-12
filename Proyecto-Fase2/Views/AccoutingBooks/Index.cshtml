@@ -2,12 +2,13 @@
 
 @{
     ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout2.cshtml";
 }
 
-<h2>Index</h2>
+<h2>Libro Contable</h2>
 
 <p>
-    @Html.ActionLink("Agregar", "Create")
+    @Html.ActionLink("Insertar", "Create", "AccoutingBook", new { @class = "btn btn-primary"})
 </p>
 <table class="table">
     <tr>
@@ -35,9 +36,9 @@
             @Html.DisplayFor(modelItem => item.Description)
         </td>
         <td>
-            @Html.ActionLink("Editar", "Edit", new { id=item.Id }) |
-            @Html.ActionLink("Detalles", "Details", new { id=item.Id }) |
-            @Html.ActionLink("Eliminar", "Delete", new { id=item.Id })
+            @Html.ActionLink("Editar", "Edit", new { id=item.Id }, new { @class = "btn btn-primary"}) 
+            @Html.ActionLink("Detalles", "Details", new { id=item.Id }, new { @class= "btn btn-primary"}) 
+            @Html.ActionLink("Eliminar", "Delete", new { id=item.Id }, new {@class = "btn btn-primary" })
         </td>
     </tr>
 }

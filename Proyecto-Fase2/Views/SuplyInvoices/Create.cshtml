@@ -2,9 +2,10 @@
 
 @{
     ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layout2.cshtml";
 }
 
-<h2>Agregar</h2>
+<h2>Create</h2>
 
 
 @using (Html.BeginForm()) 
@@ -12,59 +13,40 @@
     @Html.AntiForgeryToken()
     
     <div class="form-horizontal">
-        <h4>Agregar factura</h4>
+        <h4>SuplyInvoice</h4>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         <div class="form-group">
-            @Html.LabelFor(model => model.Id_AccountingBook, "Id_Libro contable", htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.Id_AccountingBook, "Id_AccountingBook", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.DropDownList("Id_AccountingBook", null, htmlAttributes: new { @class = "form-control" })
                 @Html.ValidationMessageFor(model => model.Id_AccountingBook, "", new { @class = "text-danger" })
             </div>
         </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.Id_LatePayment, "Mora", htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.DropDownList("Id_LatePayment", null, htmlAttributes: new { @class = "form-control" })
-                @Html.ValidationMessageFor(model => model.Id_LatePayment, "", new { @class = "text-danger" })
-            </div>
-        </div>
+      
 
         <div class="form-group">
             @Html.LabelFor(model => model.Date_Suply, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.Date_Suply, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Date_Suply, "", new { @class = "text-danger" })
+                <input type="date" id="Date_Suply" name="Date_Suply" class="form-control"/>
             </div>
         </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.TotalAmount, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.TotalAmount, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.TotalAmount, "", new { @class = "text-danger" })
-            </div>
-        </div>
+      
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.status, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.status, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.status, "", new { @class = "text-danger" })
-            </div>
-        </div>
+    
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Agregar" class="btn btn-info" />
+                <input type="submit" value="Create" class="btn btn-default" />
             </div>
         </div>
     </div>
 }
 
 <div>
-    @Html.ActionLink("Regresar", "Index","SuplyInvoice", new { @class="btn btn-danger"})
+    @Html.ActionLink("Back to List", "Index")
 </div>
 
 @section Scripts {

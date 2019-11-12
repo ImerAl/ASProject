@@ -2,11 +2,12 @@
 
 @{
     ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout2.cshtml";
 }
 
-<h2>Eliminar usuario</h2>
+<h2>Eliminar</h2>
 
-<h3>Seguro?</h3>
+<h3>Seguro que desea eliminar este usuario?</h3>
 <div>
     <h4>Usuario</h4>
     <hr />
@@ -97,8 +98,8 @@
         @Html.AntiForgeryToken()
 
         <div class="form-actions no-color">
-            <input type="submit" value="Delete" class="btn btn-default" /> |
-            @Html.ActionLink("Regresar", "Index", "Users",new { @class="btn btn-danger"})
+            <input type="submit" value="Eliminar" class="btn btn-default" /> 
+            @Html.ActionLink("Regresar", "Index", new { @class = "btn btn-primary" })
         </div>
     }
 </div>

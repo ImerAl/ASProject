@@ -13,11 +13,11 @@ namespace Proyecto_Fase2.Models
         {
             Product = new HashSet<Product>();
         }
-        [Display(Name = "Proveedor(Subcategoria)")]
+
         public int Id { get; set; }
 
         public int? Id_SCategory { get; set; }
-        
+
         public int? Id_Provider { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

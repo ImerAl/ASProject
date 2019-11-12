@@ -2,12 +2,14 @@
 
 @{
     ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout2.cshtml";
+    // new { @class = "btn btn-primary" }
 }
 
-<h2>Index</h2>
+<h2>Pagos Tardios</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Insertar", "Create", new { @class = "btn btn-primary" })
 </p>
 <table class="table">
     <tr>
@@ -47,9 +49,9 @@
             @Html.DisplayFor(modelItem => item.status)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
-            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+            @Html.ActionLink("Editar", "Edit", new { id=item.Id }, new { @class = "btn btn-primary" }) 
+            @Html.ActionLink("Detalles", "Details", new { id=item.Id }, new { @class = "btn btn-primary" }) 
+            @Html.ActionLink("Eliminar", "Delete", new { id=item.Id }, new { @class = "btn btn-primary" })
         </td>
     </tr>
 }

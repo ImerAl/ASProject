@@ -2,9 +2,10 @@
 
 @{
     ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layout2.cshtml";
 }
 
-<h2>Agregar</h2>
+<h2>Insertar</h2>
 
 
 @using (Html.BeginForm()) 
@@ -12,7 +13,7 @@
     @Html.AntiForgeryToken()
     
     <div class="form-horizontal">
-        <h4>Agregar Proveedor</h4>
+        <h4>Proveedor</h4>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         <div class="form-group">
@@ -41,16 +42,12 @@
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Agregar" class="btn btn-info" />
+                <input type="submit" value="Insertar" class="btn btn-default" />
             </div>
         </div>
     </div>
 }
 
 <div>
-    @Html.ActionLink("Regresar", "Index","Provider", new { @class="btn btn-danger"})
+    @Html.ActionLink("Regresar", "Index", new { @class = "btn btn-primary" })
 </div>
-
-@section Scripts {
-    @Scripts.Render("~/bundles/jqueryval")
-}
