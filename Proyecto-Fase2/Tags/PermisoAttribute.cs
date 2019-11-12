@@ -26,6 +26,15 @@ namespace Proyecto_Fase2.Tags
                     action = "Index"
                 }));
             }
+
+            if (!SessionHelper.ExistUserInSession())
+            {
+                filterContext.Result = new RedirectToRouteResult(new RouteValueDictionary(new
+                {
+                    controller = "Login",
+                    action = "Index"
+                }));
+            }
         }
     }
 }

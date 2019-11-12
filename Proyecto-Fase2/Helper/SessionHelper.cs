@@ -28,22 +28,30 @@ namespace Helper
 
          public static void DestroyUserSession()
          {
+            
+            string Token=System.Web.HttpContext.Current.Session["SYSAUTH"] as String;
+           
+            if (Token != null) 
+            { 
+                using (var db = new ModeloProyecto())
+                {
+                    TokenConnection tk = (from p in db.TokenConnection where p.Token == Token select p).SingleOrDefault();
+                    db.TokenConnection.Remove(tk);
+                    db.SaveChanges();                
+
+                   
+                }
+            }
             System.Web.HttpContext.Current.Session["SYSAUTH"] = null;
-            FormsAuthentication.SignOut();
-         }
-         public static int GetUser()
+
+           
+           
+        }
+
+        public static int GetUser()
          {
              int user_id = 0;
-             //if (HttpContext.Current.User != null)
-             //{
-                 
-             //           FormsAuthenticationTicket ticket = ((FormsIdentity)HttpContext.Current.User.Identity).Ticket;
-             //           if (ticket != null)
-             //           {
-             //               user_id = Convert.ToInt32(ticket.UserData);
-             //           }
-                
-             //}
+         
 
             string Token= System.Web.HttpContext.Current.Session["SYSAUTH"] as String; 
 
@@ -64,18 +72,7 @@ namespace Helper
          }
          public static void AddUserToSession(string id)
          {
-             //bool persist = true;
-             //var cookie = FormsAuthentication.GetAuthCookie("usuario", persist);
-
-             //cookie.Name = FormsAuthentication.FormsCookieName;
-             //cookie.Expires = DateTime.Now.AddMonths(3);
-
-             //var ticket = FormsAuthentication.Decrypt(cookie.Value);
-             //var newTicket = new FormsAuthenticationTicket(ticket.Version, ticket.Name, ticket.IssueDate, ticket.Expiration, ticket.IsPersistent, id);
-
-             //cookie.Value = FormsAuthentication.Encrypt(newTicket);
-             //HttpContext.Current.Response.Cookies.Add(cookie);
-
+            
             string Cadena = Metodos.GenerarCodigo(16);            
             System.Web.HttpContext.Current.Session["SYSAUTH"] = Cadena;
 

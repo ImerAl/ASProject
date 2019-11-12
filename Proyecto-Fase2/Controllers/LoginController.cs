@@ -9,11 +9,11 @@ using Proyecto_Fase2.ModeloLogin.Commons;
 
 namespace Proyecto_Fase2.Controllers
 {
-    [NoLoginAttribute]
     public class LoginController : Controller
     {
         private Users um = new Users();
 
+        [NoLoginAttribute]
         public ActionResult Index()
         {
 
@@ -29,9 +29,12 @@ namespace Proyecto_Fase2.Controllers
         {
             Helper.SessionHelper.DestroyUserSession();
        
-            return RedirectToAction("Index", "Login");
+            return RedirectToAction("Index");
 
         }
+
+
+        [NoLoginAttribute]
         public ActionResult Autenticar(LoginViewModel model)
         {
             var rm = new ResponseModel();

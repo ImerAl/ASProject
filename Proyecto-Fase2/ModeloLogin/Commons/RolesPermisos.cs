@@ -11,6 +11,7 @@ namespace Proyecto_Fase2.ModeloLogin.Commons
         #region Usuarios
         Puede_dar_mantenimiento_Menos_Usuarios = 1,
         Puede_ver_Kardex=2,
+        General=3,
         #endregion
 
 
