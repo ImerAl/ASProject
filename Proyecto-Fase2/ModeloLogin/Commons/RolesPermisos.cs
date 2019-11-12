@@ -13,6 +13,7 @@ namespace Proyecto_Fase2.ModeloLogin.Commons
         Puede_ver_Kardex=2,
         General=3,
         #endregion
+      
 
 
     }
