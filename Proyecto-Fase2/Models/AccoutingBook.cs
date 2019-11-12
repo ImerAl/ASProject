@@ -18,10 +18,10 @@ namespace Proyecto_Fase2.Models
         public int Id { get; set; }
 
         public int? Id_Area { get; set; }
-
+        [Display(Name = "Nombre")]
         [StringLength(30)]
         public string Name { get; set; }
-
+        [Display(Name ="Descripcion")]
         [StringLength(50)]
         public string Description { get; set; }
 

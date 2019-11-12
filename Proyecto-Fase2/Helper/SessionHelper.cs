@@ -28,7 +28,8 @@ namespace Helper
 
          public static void DestroyUserSession()
          {
-             FormsAuthentication.SignOut();
+            System.Web.HttpContext.Current.Session["SYSAUTH"] = null;
+            FormsAuthentication.SignOut();
          }
          public static int GetUser()
          {

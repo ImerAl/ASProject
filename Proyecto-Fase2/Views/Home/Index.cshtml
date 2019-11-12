@@ -3,30 +3,253 @@
     Layout = "~/Views/Shared/_Layout2.cshtml";
 }
 
-<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
-</div>
-
 <div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+    <div class="col-md-3 col-sm-12 col-xs-12">
+        <div class="panel panel-primary text-center no-boder bg-color-green">
+            <div class="panel-body">
+                <i class="fa fa-book fa-5x"></i>
+            </div>
+            <div class="panel-footer back-footer-blue">
+                <p>
+                    @Html.ActionLink("Libro Contable", "Index", "AccoutingBooks")
+                </p>
+
+            </div>
+        </div>
     </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
+    <div class="col-md-3 col-sm-12 col-xs-12">
+        <div class="panel panel-primary text-center no-boder bg-color-green">
+            <div class="panel-body">
+                <i class="fa fa-map-marker-alt fa-5x"></i>
+            </div>
+            <div class="panel-footer back-footer-blue">
+                <p>
+                    @Html.ActionLink("Areas", "Index", "Areas")
+                </p>
+
+            </div>
+        </div>
     </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+    <div class="col-md-3 col-sm-12 col-xs-12">
+        <div class="panel panel-primary text-center no-boder bg-color-green">
+            <div class="panel-body">
+                <i class="fa fa-sitemap fa-5x"></i>
+            </div>
+            <div class="panel-footer back-footer-blue">
+                <p>
+                    @Html.ActionLink("Categorias", "Index", "Categories")
+                </p>
+
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3 col-sm-12 col-xs-12">
+        <div class="panel panel-primary text-center no-boder bg-color-green">
+            <div class="panel-body">
+                <i class="fa fa-book-open fa-5x"></i>
+            </div>
+            <div class="panel-footer back-footer-blue">
+                <p>
+                    @Html.ActionLink("Kardex", "Index", "SuplyProducts")
+                </p>
+
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-3 col-sm-12 col-xs-12">
+        <div class="panel panel-primary text-center no-boder bg-color-green">
+            <div class="panel-body">
+                <i class="fa fa-check-square fa-5x"></i>
+            </div>
+            <div class="panel-footer back-footer-blue">
+                <p>
+                    @Html.ActionLink("Control de Permisos", "Index", "DPBRs")
+                </p>
+
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3 col-sm-12 col-xs-12">
+        <div class="panel panel-primary text-center no-boder bg-color-green">
+            <div class="panel-body">
+                <i class="fa fa-user-tie fa-5x"></i>
+            </div>
+            <div class="panel-footer back-footer-blue">
+                <p>
+                    @Html.ActionLink("Empleados", "Index", "Employees")
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3 col-sm-12 col-xs-12">
+        <div class="panel panel-primary text-center no-boder bg-color-green">
+            <div class="panel-body">
+                <i class="fa fa-calendar-times fa-5x"></i>
+            </div>
+            <div class="panel-footer back-footer-blue">
+                <p>
+                    @Html.ActionLink("Pagos Tardios", "Index", "LatePayments")
+                </p>
+
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3 col-sm-12 col-xs-12">
+        <div class="panel panel-primary text-center no-boder bg-color-green">
+            <div class="panel-body">
+                <i class="fa fa-user-check fa-5x"></i>
+            </div>
+            <div class="panel-footer back-footer-blue">
+                <p>
+                    @Html.ActionLink("Permisos", "Index", "Permissions")
+                </p>
+
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-3 col-sm-12 col-xs-12">
+        <div class="panel panel-primary text-center no-boder bg-color-green">
+            <div class="panel-body">
+                <i class="fa fa-phone-alt fa-5x"></i>
+            </div>
+            <div class="panel-footer back-footer-blue">
+                <p>
+                    @Html.ActionLink("Telefonos", "Index", "Phones")
+                </p>
+
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3 col-sm-12 col-xs-12">
+        <div class="panel panel-primary text-center no-boder bg-color-green">
+            <div class="panel-body">
+                <i class="fa fa-dollar-sign fa-5x"></i>
+            </div>
+            <div class="panel-footer back-footer-blue">
+                <p>
+                    @Html.ActionLink("Compras", "Index", "ProductPurchases")
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3 col-sm-12 col-xs-12">
+        <div class="panel panel-primary text-center no-boder bg-color-green">
+            <div class="panel-body">
+                <i class="fa fa-cookie-bite fa-5x"></i>
+            </div>
+            <div class="panel-footer back-footer-blue">
+                <p>
+                    @Html.ActionLink("Productos", "Index", "Products")
+                </p>
+
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3 col-sm-12 col-xs-12">
+        <div class="panel panel-primary text-center no-boder bg-color-green">
+            <div class="panel-body">
+                <i class="fa fa-truck fa-5x"></i>
+            </div>
+            <div class="panel-footer back-footer-blue">
+                <p>
+                    @Html.ActionLink("Proveedores", "Index", "Providers")
+                </p>
+
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-3 col-sm-12 col-xs-12">
+        <div class="panel panel-primary text-center no-boder bg-color-green">
+            <div class="panel-body">
+                <i class="fa fa-info-circle fa-5x"></i>
+            </div>
+            <div class="panel-footer back-footer-blue">
+                <p>
+                    @Html.ActionLink("Detalles de Compra", "Index", "PurcharseDetails")
+                </p>
+
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3 col-sm-12 col-xs-12">
+        <div class="panel panel-primary text-center no-boder bg-color-green">
+            <div class="panel-body">
+                <i class="fa fa-users fa-5x"></i>
+            </div>
+            <div class="panel-footer back-footer-blue">
+                <p>
+                    @Html.ActionLink("Roles", "Index", "Roles")
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3 col-sm-12 col-xs-12">
+        <div class="panel panel-primary text-center no-boder bg-color-green">
+            <div class="panel-body">
+                <i class="fa fa-hotdog fa-5x"></i>
+            </div>
+            <div class="panel-footer back-footer-blue">
+                <p>
+                    @Html.ActionLink("Sub Categoria Productos", "Index", "Sub_Category")
+                </p>
+
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3 col-sm-12 col-xs-12">
+        <div class="panel panel-primary text-center no-boder bg-color-green">
+            <div class="panel-body">
+                <i class="fa fa-box-open fa-5x"></i>
+            </div>
+            <div class="panel-footer back-footer-blue">
+                <p>
+                    @Html.ActionLink("Sub Categoria Proveedores", "Index", "SubCategory_Provider")
+                </p>
+
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    
+    <div class="col-md-3 col-sm-12 col-xs-12">
+        <div class="panel panel-primary text-center no-boder bg-color-green">
+            <div class="panel-body">
+                <i class="fa fa-user fa-5x"></i>
+            </div>
+            <div class="panel-footer back-footer-blue">
+                <p>
+                    @Html.ActionLink("Usuarios", "Index", "Users")
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3 col-sm-12 col-xs-12">
+        <div class="panel panel-primary text-center no-boder bg-color-green">
+            <div class="panel-body">
+                <i class="fa fa-hand-holding-usd fa-5x"></i>
+            </div>
+            <div class="panel-footer back-footer-blue">
+                <p>
+                    Cuentas por Cobrar
+
+                <p>
+                    @Html.ActionLink("30 dias", "Index", "CxC30")
+                </p>
+                <p>
+                    @Html.ActionLink("60 dias", "Index", "CxC60")
+                </p>
+                <p>
+                    @Html.ActionLink("90 dias", "Index", "CxC90")
+                </p>
+
+            </div>
+        </div>
     </div>
 </div>
