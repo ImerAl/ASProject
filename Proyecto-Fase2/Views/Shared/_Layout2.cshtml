@@ -14,7 +14,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <a class="collapse-item" href="localhost:44313/Home">SASV</a>
+    <title>SASV</title>
 
     <link href="~/Content/Template/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
@@ -31,7 +31,7 @@
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="https://localhost:44313/Home/Index">
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fas fa-laugh-wink"></i>
                 </div>
@@ -65,9 +65,9 @@
                 </a>
                 <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" href="localhost:44313/AccoutingBooks">Libro Contable</a>
-                        <a class="collapse-item" href="localhost:44313/Areas">Areas</a>
-                        <a class="collapse-item" href="localhost:44313/Categories">Categorias</a>
+                        <a class="collapse-item" href="https://localhost:44313/AccoutingBooks/Index">Libro Contable</a>
+                        <a class="collapse-item" href="https://localhost:44313/Areas/Index">Areas</a>
+                        <a class="collapse-item" href="https://localhost:44313/Categories/Index">Categorias</a>
                         <a class="collapse-item" href="localhost:44313/CxC30">Cuentas por Cobrar (30 dias)</a>
                         <a class="collapse-item" href="localhost:44313/CxC60">Cuentas por Cobrar (60 dias)</a>
                         <a class="collapse-item" href="localhost:44313/CxC90">Cuentas por Cobrar (90 dias)</a>
@@ -94,7 +94,7 @@
             <li class="nav-item">
                 <a class="nav-link" href="charts.html">
                     <i class="fas fa-fw fa-user"></i>
-                    <a class="collapse-item" href="localhost:44313/Login">Login</a>
+                    <a class="collapse-item" href="https://localhost:44313/Login">Login</a>
                 </a>
             </li>
 
@@ -147,18 +147,19 @@
                             <!-- Dropdown - Messages -->
                             
                         <!-- Nav Item - User Information -->
-                        <li class="nav-item dropdown no-arrow">
+                        @*<li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <span class="mr-2 d-none d-lg-inline text-gray-600 small">@Proyecto_Fase2.ModeloLogin.Commons.FrontUser.Get().LName1, @Proyecto_Fase2.ModeloLogin.Commons.FrontUser.Get().Name1</span>
                                
-                            </a>
+                            </a>*@
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                                <a class="dropdown-item" href="#" href="~/Login/logout" data-toggle="modal" data-target="#logoutModal">
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Logout
                                 </a>
+                                 
                             </div>
                         </li>
 

@@ -25,7 +25,13 @@ namespace Proyecto_Fase2.Controllers
 
             return View();
         }
+        public ActionResult logout()
+        {
+            Helper.SessionHelper.DestroyUserSession();
+       
+            return RedirectToAction("Index", "Login");
 
+        }
         public ActionResult Autenticar(LoginViewModel model)
         {
             var rm = new ResponseModel();
